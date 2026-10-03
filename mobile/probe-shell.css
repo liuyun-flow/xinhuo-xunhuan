@@ -1,0 +1,130 @@
+#pwa-probe-badge {
+  position: fixed;
+  z-index: 1000;
+  top: max(3px, env(safe-area-inset-top, 0px));
+  left: 50%;
+  display: inline-flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 7px;
+  border: 1px solid rgba(255, 117, 107, .72);
+  border-radius: 999px;
+  color: #fff5ef;
+  background: rgba(83, 24, 23, .88);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .35);
+  font: 700 9px/1.1 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: .05em;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+#pwa-probe-badge::before {
+  content: "";
+}
+
+#pwa-probe-badge[data-sw-status="registration-failed"],
+#pwa-probe-badge[data-sw-status="scope-refused"],
+#pwa-probe-badge[data-sw-status="insecure-context"] {
+  border-color: #ff756b;
+  background: rgba(104, 18, 17, .94);
+}
+
+#pwa-probe-mode {
+  min-width: 14px;
+  padding-left: 5px;
+  border-left: 1px solid rgba(255, 255, 255, .35);
+  text-align: center;
+}
+
+#pwa-probe-tools {
+  position: fixed;
+  z-index: 1001;
+  top: max(3px, env(safe-area-inset-top, 0px));
+  right: max(3px, env(safe-area-inset-right, 0px));
+  display: flex;
+  gap: 3px;
+  opacity: .82;
+}
+
+#pwa-probe-tools:focus-within,
+#pwa-probe-tools:hover {
+  opacity: 1;
+}
+
+#pwa-probe-tools button {
+  min-width: 38px;
+  min-height: 28px;
+  padding: 3px 6px;
+  border: 1px solid rgba(214, 229, 233, .35);
+  border-radius: 8px;
+  color: #f3f7f7;
+  background: rgba(12, 20, 27, .9);
+  font: 700 9px/1 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  touch-action: manipulation;
+}
+
+#pwa-haptics-toggle[data-supported="false"] {
+  border-style: dashed;
+  color: #a7b2b5;
+}
+
+#pwa-safe-area-probe {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  padding:
+    env(safe-area-inset-top, 0px)
+    env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px)
+    env(safe-area-inset-left, 0px);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*
+ * Post-G4 fixed-world platform probe: A and B render the same 750x332 world
+ * through the core contain projection. A preserves the 760px C11 display cap;
+ * B fills the visual viewport and lets the arena draw behind non-interactive
+ * insets while all controls continue to consume the real safe-area variables.
+ */
+@media (orientation: landscape) and (max-height: 500px) {
+  html[data-probe-layout="a"] body:has(#game-screen:not([hidden])) {
+    --c12-landscape-shell: min(100vw, 760px);
+  }
+
+  html[data-probe-layout="b"] body:has(#game-screen:not([hidden])) {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    place-items: stretch;
+  }
+
+  html[data-probe-layout="b"] .app-shell:has(#game-screen:not([hidden])) {
+    width: 100%;
+    max-width: none;
+  }
+
+  html[data-probe-layout="b"] .app-shell:has(#game-screen:not([hidden])) .overlay {
+    --c11-overlay-gutter: 0px;
+    width: 100%;
+  }
+
+  html[data-probe-layout="b"] .app-shell:has(#game-screen:not([hidden])) .game-screen {
+    --c11-shell-gutter: 0px;
+    --c11-arena-safe-left: max(0px, var(--safe-left));
+    --c11-arena-safe-right: max(0px, var(--safe-right));
+    gap: 0;
+    padding: max(0px, var(--safe-top)) 0 0;
+  }
+}
+
+/* G7 candidate diagnostics stay out of the player surface unless explicitly requested. */
+html[data-candidate-diagnostics="true"] #pwa-probe-badge::before {
+  content: "G7 候选 · 平台诊断";
+}
+
+html:not([data-candidate-diagnostics="true"]) #pwa-probe-badge,
+html:not([data-candidate-diagnostics="true"]) #pwa-probe-tools {
+  display: none !important;
+}

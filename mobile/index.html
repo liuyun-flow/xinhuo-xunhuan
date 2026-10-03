@@ -1,0 +1,530 @@
+<!doctype html>
+<!-- EMBER-MOBILE-01: 私有 G7 精确候选；未进入发行版。源提交 27ee268a966440e1f5bcb5417af5ffffdd2cb583。构建变换：ember-test-bridge-v1。 -->
+<html lang="zh-CN" data-pwa-candidate="true" data-probe-layout="b">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0c1510" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="ember-build-channel" content="production" />
+    <meta name="ember-delivery-class" content="pwa-candidate" />
+    <meta name="ember-candidate" content="true" />
+    <meta name="ember-storage-namespace" content="ember-loop-ember-mobile-01-" />
+    <meta name="ember-source-app-sha256" content="9d4cc8bfed3bc10730f0ac74d24d49e23bc93f8fd92a73fe1eabc1fdf95968da" />
+    <meta name="ember-bundled-app-sha256" content="aa9bcb3fdc683627e50913747d14cb1e63e9f919be39b70784c20ad92ca8b0cc" />
+    <meta name="ember-source-commit" content="27ee268a966440e1f5bcb5417af5ffffdd2cb583" />
+    <meta name="ember-production-sha256" content="afa997cdce15166431bec0f3f7263e9a32b70ab1a4fc5b0c06ff527664b0d582" />
+    <meta name="ember-default-layout" content="b" />
+    <meta name="ember-diagnostics-query" content="diagnostics=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; style-src-elem 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data:; manifest-src 'self'; worker-src 'self'; child-src 'self'; connect-src 'self'; media-src 'none'; font-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta name="description" content="《薪火循环》EMBER-MOBILE-01 私有真机与真人验收候选" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/icon-180.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>薪火循环 · EMBER-MOBILE-01</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./probe-shell.css" />
+  </head>
+  <body>
+    <aside id="pwa-probe-badge" hidden aria-hidden="true" data-sw-status="pending" aria-label="G7 候选平台诊断">
+      <span id="pwa-probe-mode">A</span>
+    </aside>
+    <div id="pwa-probe-tools" hidden aria-hidden="true" role="group" aria-label="G7 候选诊断工具">
+      <button id="pwa-haptics-toggle" type="button" aria-pressed="true">震动开</button>
+      <button id="pwa-diagnostics-export" type="button">导出诊断</button>
+    </div>
+    <div id="pwa-safe-area-probe" aria-hidden="true"></div>
+    <div id="app" class="app-shell">
+      <header class="topbar">
+        <div>
+          <span class="experiment-mark">EMBER-MOBILE-01</span>
+          <strong>薪火循环</strong>
+        </div>
+        <div class="account-strip" aria-label="守火档案摘要">
+          <span class="legacy-balance">历史余烬 <b id="top-embers">0</b></span>
+          <span>最深 <b id="top-best-wave">0</b></span>
+          <span>接火 <b id="top-relay-count">0</b></span>
+          <span>最高 <b id="top-record-grade">—</b></span>
+          <button id="mute-button" class="sound-toggle" type="button" aria-pressed="false" aria-label="关闭声音">声音</button>
+          <button id="music-toggle" class="sound-toggle music-toggle" type="button" aria-pressed="true" aria-label="关闭背景音乐">音乐</button>
+          <button id="help-button" class="sound-toggle help-entry" type="button" aria-haspopup="dialog" aria-controls="help-overlay">说明</button>
+          <button id="vibration-button" class="sound-toggle" type="button" aria-pressed="true" aria-label="关闭震动">震动</button>
+        </div>
+      </header>
+
+      <main>
+        <section id="home-screen" class="screen home-screen c13-home c14-home" aria-labelledby="game-title">
+          <div class="home-dashboard">
+            <aside class="loadout-summary" aria-label="当前出战组合">
+              <div class="home-hero-art" aria-hidden="true">
+<svg viewBox="0 0 580 640" fill="none" aria-hidden="true" class="hearth-scene">
+  <defs>
+    <linearGradient id="hearth-flame" x1="296" y1="119" x2="296" y2="422" gradientUnits="userSpaceOnUse"><stop stop-color="#fff0c4"/><stop offset=".46" stop-color="#efad69"/><stop offset="1" stop-color="#9c412a"/></linearGradient>
+    <linearGradient id="hearth-inner" x1="299" y1="210" x2="299" y2="412" gradientUnits="userSpaceOnUse"><stop stop-color="#fff6d9"/><stop offset="1" stop-color="#f2c18c"/></linearGradient>
+    <linearGradient id="hearth-stone" x1="223" y1="396" x2="379" y2="540" gradientUnits="userSpaceOnUse"><stop stop-color="#334940"/><stop offset="1" stop-color="#0a1412"/></linearGradient>
+    <linearGradient id="hearth-edge" x1="196" y1="450" x2="409" y2="450" gradientUnits="userSpaceOnUse"><stop stop-color="#7f6950"/><stop offset=".48" stop-color="#e3ab6a"/><stop offset="1" stop-color="#41544b"/></linearGradient>
+    <radialGradient id="hearth-halo"><stop stop-color="#bf753d" stop-opacity=".2"/><stop offset="1" stop-color="#bf753d" stop-opacity="0"/></radialGradient>
+    <radialGradient id="hearth-floor"><stop stop-color="#957954" stop-opacity=".24"/><stop offset="1" stop-color="#26392f" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="297" cy="349" rx="255" ry="261" fill="url(#hearth-halo)"/>
+  <g stroke="#aa8057" stroke-width=".7" opacity=".32">
+    <circle cx="294" cy="315" r="177"/>
+    <circle cx="294" cy="315" r="153" stroke-dasharray="2 10"/>
+    <path d="M294 105V142M294 489V528M84 315H122M466 315H504M147 168L173 194M415 436L442 463M147 463L175 435M415 194L442 167"/>
+    <path d="M264 107H324M264 525H324M86 285V345M502 285V345" opacity=".45"/>
+    <path d="M139 226L451 404M139 404L451 226" opacity=".13"/>
+  </g>
+  <path d="M0 465L94 407L148 446L186 421L240 459L333 403L398 446L460 409L580 471V640H0Z" fill="#10201a" opacity=".6"/>
+  <path d="M0 519L109 467L194 490L262 460L391 507L497 472L580 510V640H0Z" fill="#0b1712"/>
+  <ellipse cx="304" cy="533" rx="240" ry="100" fill="url(#hearth-floor)"/>
+  <g stroke="#465446" opacity=".34" stroke-width="1">
+    <path d="M98 565L219 527M383 530L507 573M153 589L276 552M344 551L454 601M57 535H183M437 540H546"/>
+    <path d="M136 520L97 531M182 596L155 610M430 576L472 590"/>
+  </g>
+  <path d="M298 145C303 182 258 211 273 251C278 265 288 273 284 294C306 271 341 253 329 216C359 242 373 283 353 312C349 321 344 329 347 341C359 329 366 317 366 298C389 335 370 385 330 405C299 421 262 407 242 379C224 354 226 319 248 292C240 319 250 336 263 343C250 317 253 290 266 269C250 228 271 193 298 145Z" fill="url(#hearth-flame)"/>
+  <path d="M306 226C314 259 281 281 296 309C319 290 330 292 337 274C348 301 322 315 323 336C349 346 341 370 319 385C310 395 294 395 282 386C262 371 260 347 277 327C273 347 282 358 291 360C280 334 290 320 285 305C273 283 291 250 306 226Z" fill="url(#hearth-inner)"/>
+  <path d="M323 189L331 164L317 158L330 126L315 135L309 163Z" fill="#86b8a2" opacity=".8"/>
+  <path d="M301 153L305 126L294 142Z" fill="#fff0c4"/>
+  <path d="M248 289L241 266L247 247L255 267Z" fill="#ca8550"/>
+  <path d="M349 239L357 214L353 200L344 224Z" fill="#d5a06c"/>
+  <g fill="#d6a475">
+    <path d="M244 174L248 168L251 178L247 184Z"/>
+    <path d="M382 262L385 254L389 267L384 273Z"/>
+    <path d="M278 112L281 108L283 116L280 120Z"/>
+    <path d="M341 83L344 78L346 88L343 92Z" opacity=".5"/>
+    <path d="M215 341L218 335L220 342L217 347Z"/>
+    <path d="M387 357L391 350L395 361L391 368Z" opacity=".4"/>
+  </g>
+  <path d="M210 421L294 396L385 422L402 455L294 491L195 454Z" fill="url(#hearth-stone)" stroke="#58654e"/>
+  <path d="M210 422L295 447L385 422M294 448V491" stroke="url(#hearth-edge)" stroke-width="2"/>
+  <path d="M210 422L228 450L294 472L371 449L385 422" stroke="#213b2c" stroke-width="6"/>
+  <path d="M202 465L294 495L398 461L390 508L294 541L210 513Z" fill="#101f17" stroke="#374939"/>
+  <path d="M294 495V541M213 481L253 496M333 494L383 477" stroke="#4e5b43"/>
+  <path d="M194 516L294 549L402 512L418 531L294 577L180 538Z" fill="#17271c" stroke="#3b4d35"/>
+  <path d="M194 516L294 549L402 512" stroke="#7a7750"/>
+  <path d="M252 458L272 464M322 463L342 456M290 453L296 455" stroke="#e0b57d" stroke-width="2"/>
+  <path d="M285 424L295 418L306 424L295 431Z" fill="#f5cf9b"/>
+  <path d="M292 433L295 436L298 433" stroke="#bd9b65"/>
+  <g fill="#06100d" stroke="#677661" stroke-width=".65">
+    <path d="M412 480C405 471 407 455 419 450C435 447 442 458 437 472L431 480L447 494L454 531L447 559L451 594L437 596L428 553L414 594L400 590L411 548L404 523L397 540L389 536L401 504Z"/>
+    <path d="M406 481L418 475L437 480L449 502L443 544L425 555L408 541L409 507L399 515Z" fill="#182b20"/>
+    <path d="M413 481L411 515L436 530L441 495L430 480" fill="#24392b"/>
+    <path d="M415 457L433 456L437 469L427 475L413 468Z" fill="#12271a"/>
+  </g>
+  <path d="M406 488L415 480L433 482L436 491L428 484L417 485Z" fill="#a28856"/>
+  <path d="M446 511L494 425L499 428L452 518Z" fill="#8e7950"/>
+  <path d="M486 434L500 439L509 418L495 413Z" fill="#c5a46d"/>
+  <path d="M498 374C506 389 491 394 500 407C506 400 512 394 510 386C521 399 516 415 506 421C493 424 484 411 490 399C487 388 496 383 498 374Z" fill="#ecc991"/>
+  <path d="M501 399C509 406 505 416 499 417C494 414 494 409 501 399Z" fill="#fff0c9"/>
+  <path d="M402 527L389 559L394 563L410 530" fill="#a88c56"/>
+  <path d="M408 589L393 599L414 597M439 594L455 603L435 600" stroke="#0a140f" stroke-width="5"/>
+  <path d="M306 568L314 576L305 584L297 575Z" stroke="#8e8b5e" opacity=".5"/>
+</svg>
+
+                <div class="bearer-sigil" id="current-bearer-sigil">燧</div>
+              </div>
+              <div class="loadout-copy">
+                <span>灰潮来临 · 守火不息</span>
+                <h1 id="game-title"><span>薪火</span><span>循环</span></h1>
+                <p class="home-tagline">守住这一束火。<br />穿过灰潮，让冷炉再次燃起。</p>
+              </div>
+              <div class="bearer-profile">
+                <span>当前承火者</span>
+                <strong id="current-bearer-name">持炬人·燧</strong>
+                <p id="current-bearer-description">满热换火释放转火脉冲，守住近身空隙。</p>
+              </div>
+              <div class="stage-serial" aria-hidden="true">EMBER / ASH / AGAIN</div>
+              <div class="record-chip"><span>官方纪录</span><b id="home-classic-record">暂无纪录</b></div>
+            </aside>
+
+            <div id="setup-stack" class="setup-stack" aria-label="高级出战整备" hidden>
+              <section class="setup-block character-block" aria-labelledby="character-title">
+                <div class="setup-heading"><span>01</span><h2 id="character-title">承火者</h2><b id="bearer-unlock-count">1 / 3</b></div>
+                <div id="character-options" class="option-grid character-options"></div>
+              </section>
+
+              <section class="setup-block weapon-style-block" aria-labelledby="weapon-style-title">
+                <div class="setup-heading"><span>02</span><h2 id="weapon-style-title">起始兵式</h2><b>双器同炉</b></div>
+                <div id="weapon-style-options" class="option-grid weapon-style-options"></div>
+              </section>
+
+              <section class="setup-block fire-trait-block" aria-labelledby="fire-trait-title">
+                <div class="setup-heading"><span>03</span><h2 id="fire-trait-title">难度</h2><b id="danger-unlock-count">0 / 2</b></div>
+                <div id="fire-trait-options" class="option-grid fire-trait-options"></div>
+              </section>
+            </div>
+
+            <aside class="run-panel" aria-label="本局摘要">
+              <div class="run-panel-header">
+                <div class="run-mark"><span>本局目标</span><strong>守住 15 波</strong><small>每五波一场强敌战</small></div>
+                <div class="replay-objective" aria-live="polite">
+                  <span id="home-attempt-record">最佳尝试 · 暂无</span>
+                  <strong id="home-next-target">首个目标：守过 W5</strong>
+                </div>
+              </div>
+              <div class="quick-rule" aria-label="快速上手规则">
+                <span>三秒上手</span>
+                <strong>拖动移动，武器自动攻击</strong>
+                <small>先安心走位；换火与爆闪会在后续波次逐步出现。</small>
+                <div class="quick-rule-steps" aria-hidden="true">
+                  <span>① 拖动移动</span><span>② 自动攻击</span><span>③ 危险时闪</span>
+                </div>
+              </div>
+              <section class="build-summary-card" aria-labelledby="build-summary-title">
+                <div class="build-summary-heading"><span id="build-summary-title">当前构筑</span><small>开局前可随时调整</small></div>
+                <dl class="run-summary-list">
+                  <div><dt>承火者</dt><dd id="summary-bearer">燧</dd></div>
+                  <div><dt>兵式</dt><dd id="summary-loadout">锋火·锁环</dd></div>
+                  <div><dt>难度</dt><dd id="summary-danger">轻松</dd></div>
+                  <div><dt>纪录倍率</dt><dd id="summary-multiplier">×1.00</dd></div>
+                </dl>
+              </section>
+              <div class="auto-swap-setting">
+                <div><span>自动换火</span><small>W3 起满热时自动切换；也可在战斗中暂停修改</small></div>
+                <button id="auto-swap-toggle" class="setting-toggle" type="button" aria-pressed="true" aria-label="自动换火已开启，点击关闭"><span>开启</span><i aria-hidden="true"></i></button>
+              </div>
+              <p id="start-summary" class="start-summary">轻松开局 · 自动攻击 · 自动换火</p>
+              <div class="launch-actions" aria-label="开始游戏">
+                <button id="start-button" class="primary-button" type="button">开始守火</button>
+                <button id="loadout-toggle-button" class="secondary-button" type="button" aria-expanded="false" aria-controls="setup-stack">更换构筑</button>
+                <button id="tutorial-start-button" class="secondary-button" type="button">
+                  <span id="tutorial-recommendation" hidden>可选</span>
+                  <strong id="tutorial-start-label">动作练习</strong>
+                </button>
+              </div>
+              <div class="home-nav" aria-label="局外功能">
+                <button id="archive-button" class="drawer-button" type="button">档案 <b id="achievement-count">0 / 8</b></button>
+                <button id="legacy-button" class="drawer-button" type="button">传承 <b id="legacy-rank-count">0</b></button>
+              </div>
+              <p class="control-hint">拖动／WASD 移动 · 其余操作都可暂时不管</p>
+            </aside>
+          </div>
+        </section>
+
+        <section id="game-screen" class="screen game-screen" hidden aria-labelledby="wave-label">
+          <div class="game-hud">
+            <div><span id="wave-caption">波次</span><strong id="wave-label">1</strong></div>
+            <div><span>等级</span><strong id="level-label">1</strong></div>
+            <div><span>击杀</span><strong id="kills-label">0</strong></div>
+            <button id="time-scale-button" class="icon-button speed-toggle" type="button" aria-label="当前 1 倍速，点击切换为 2 倍速">1×</button>
+            <button id="pause-button" class="icon-button" type="button" aria-label="暂停">Ⅱ</button>
+          </div>
+
+          <div class="status-bars">
+            <div class="status-row health-row"><span>生命</span><div><i id="health-fill"></i></div><b id="health-label">100 / 100</b></div>
+            <div class="status-row xp-row"><span>经验</span><div><i id="xp-fill"></i></div><b id="xp-label">0 / 6</b></div>
+          </div>
+
+          <div class="stage-strip">
+            <span id="stage-label">第一幕 · 1—5 波</span>
+            <strong id="contract-label">轻松模式 · 自动攻击与自动换火</strong>
+          </div>
+
+          <div class="fire-forge-strip" aria-label="夺火与铸招状态">
+            <span><small>夺火槽</small><strong id="fire-slots" aria-label="火性槽：空">◇ ◇ ◇</strong></span>
+            <span><small>炉核</small><strong id="fire-core">炉核待炼</strong></span>
+            <span class="technique-readout"><small>同源招</small><strong id="fire-technique">尚未成招</strong></span>
+          </div>
+
+          <section class="arena-shell" aria-label="薪火战场">
+            <canvas id="game-canvas"></canvas>
+            <div id="wave-banner" class="wave-banner" aria-live="polite">第 1 波</div>
+            <div id="encounter-chip" class="encounter-chip" hidden><span>特殊遭遇</span><strong id="encounter-label">追猎潮</strong></div>
+            <div id="relay-chip" class="relay-chip" hidden><span>薪种接力</span><strong id="relay-label">接火线 W01</strong></div>
+            <div id="boss-bar" class="boss-bar" hidden><span id="boss-name">首领</span><div><i id="boss-fill"></i><b id="boss-phase-mark" hidden></b></div></div>
+            <div id="drag-hint" class="drag-hint">拖动移动 · 武器会自动攻击</div>
+            <div id="relay-burst" class="relay-burst" hidden aria-live="assertive">
+              <span>接火成功</span><strong id="relay-burst-label">薪种 +1</strong>
+            </div>
+            <section id="tutorial-guide" class="tutorial-guide" hidden aria-live="polite" aria-atomic="true">
+              <div class="tutorial-guide-progress">
+                <span id="tutorial-step-count">1 / 5</span>
+                <i><em id="tutorial-progress-fill"></em></i>
+              </div>
+              <div class="tutorial-guide-copy">
+                <strong id="tutorial-step-title">先活着移动</strong>
+                <p id="tutorial-step-copy">移动一小段，先让身体记住战场。</p>
+              </div>
+            </section>
+            <button id="tutorial-skip-button" type="button" hidden>跳过试火</button>
+            <div id="joystick-zone" class="joystick-zone" aria-hidden="true">
+              <div id="joystick-base" class="joystick-base"><i id="joystick-knob"></i><span>移动</span></div>
+            </div>
+            <div id="weapon-rack" class="weapon-rack" aria-label="双武器状态">
+              <div id="carbine-slot" class="weapon-slot is-active" data-weapon="carbine">
+                <span>铳</span><b id="carbine-name">燧火铳</b><i><em id="carbine-heat"></em></i>
+              </div>
+              <div id="ring-slot" class="weapon-slot" data-weapon="cinderRing">
+                <span>轮</span><b id="ring-name">烬轮</b><i><em id="ring-heat"></em></i>
+              </div>
+              <small id="core-chip">炉心未装备</small>
+            </div>
+            <button id="switch-button" class="switch-button is-ready" type="button" aria-label="换为烬轮，满热技已就绪">
+              <span id="switch-glyph">轮</span><b id="switch-label">换火</b>
+            </button>
+            <button id="flash-button" class="ability-button is-ready" type="button" aria-label="薪火爆闪已就绪">
+              <span>闪</span><b id="flash-cooldown">就绪</b>
+            </button>
+          </section>
+
+        </section>
+      </main>
+
+      <section id="home-drawer" class="overlay home-drawer" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="home-drawer-title">
+        <div class="overlay-card home-drawer-card">
+          <header class="drawer-heading">
+            <div><span>守火档案</span><h2 id="home-drawer-title">档案与纪录</h2></div>
+            <button id="home-drawer-close" class="drawer-close" type="button" aria-label="关闭">关闭</button>
+          </header>
+          <div id="home-drawer-body" class="home-drawer-body">
+            <section id="archive-drawer-panel" class="drawer-panel" aria-label="成就与纪录">
+              <div class="drawer-section-heading"><h3>八枚火印</h3><b id="drawer-achievement-count">0 / 8</b></div>
+              <div id="achievement-list" class="achievement-list"></div>
+              <div class="drawer-section-heading record-heading"><h3>官方纪录 · 承火者 × 难度</h3><small>只接受未接火的 W15 胜利</small></div>
+              <div id="classic-record-matrix" class="classic-record-matrix"></div>
+            </section>
+            <section id="legacy-drawer-panel" class="drawer-panel" hidden aria-label="永久传承">
+              <div class="drawer-section-heading">
+                <h3>余烬传承</h3>
+                <div class="save-actions" aria-label="存档工具">
+                  <button id="export-save-button" class="text-button" type="button">导出</button>
+                  <button id="import-save-button" class="text-button" type="button">导入</button>
+                  <button id="reset-save-button" class="text-button" type="button">重置</button>
+                  <input id="import-save-input" type="file" accept="application/json,.json" hidden />
+                </div>
+              </div>
+              <p class="drawer-note">历史传承保留展示；当前守火与正式纪录不读取旧永久战力。</p>
+              <div id="home-upgrades" class="legacy-grid"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="choice-overlay" class="overlay" hidden aria-labelledby="choice-title">
+        <div class="overlay-card choice-sheet">
+          <p id="choice-kicker" class="overlay-kicker">薪火增强</p>
+          <h2 id="choice-title">选择一项成长</h2>
+          <p class="keyboard-choice-hint">电脑端可按 <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> 直接选择</p>
+          <div id="choice-list" class="choice-list"></div>
+        </div>
+      </section>
+
+      <section id="contract-overlay" class="overlay" hidden aria-labelledby="contract-title">
+        <div class="overlay-card contract-sheet">
+          <p id="contract-kicker" class="overlay-kicker">阶段转换 · 战场暂停</p>
+          <h2 id="contract-title">为接下来五波选择契约</h2>
+          <p class="contract-intro">契约会改变这一幕的供火和敌阵；只禁止连续重复，因此可以形成 A—B—A。</p>
+          <p id="contract-preview" class="contract-preview"></p>
+          <p class="keyboard-choice-hint">电脑端可按 <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> 直接选择</p>
+          <div id="contract-list" class="choice-list contract-list"></div>
+        </div>
+      </section>
+
+      <section id="core-overlay" class="overlay" hidden aria-labelledby="core-title">
+        <div class="overlay-card contract-sheet core-sheet">
+          <p id="core-kicker" class="overlay-kicker">首领战利品 · 战场暂停</p>
+          <h2 id="core-title">装备一个炉心</h2>
+          <p class="contract-intro">炉心改变你何时值得换火。本局只装备一个，后续首领会直接强化它。</p>
+          <p class="keyboard-choice-hint">电脑端可按 <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> 直接选择</p>
+          <div id="core-list" class="choice-list contract-list"></div>
+        </div>
+      </section>
+
+      <section id="victory-overlay" class="overlay" hidden aria-labelledby="victory-title">
+        <div class="overlay-card victory-sheet">
+          <p id="victory-kicker" class="overlay-kicker">第 15 波已肃清 · 守火完成</p>
+          <h2 id="victory-title">你已经赢了</h2>
+          <p id="victory-copy" class="victory-copy">守火者已经熄灭，第 15 波就是本轮终点。</p>
+          <div class="result-grid">
+            <div><span id="victory-progress-caption">完成波次</span><strong id="victory-progress">15</strong></div>
+            <div><span>总击杀</span><strong id="victory-kills">0</strong></div>
+            <div><span id="victory-embers-caption">纪录状态</span><strong id="victory-embers">待核对</strong></div>
+          </div>
+          <section id="victory-score-card" class="score-card" hidden aria-labelledby="victory-score-title">
+            <div class="grade-seal"><span>守火评定</span><strong id="victory-grade">A</strong></div>
+            <div class="score-copy"><h3 id="victory-score-title"><span id="victory-score">0</span> 分</h3><p id="victory-score-breakdown"></p></div>
+            <div id="victory-unlocks" class="victory-unlocks"></div>
+          </section>
+          <p id="victory-report" class="victory-report"></p>
+          <button id="victory-home-button" class="primary-button" type="button">回到整备</button>
+          <button id="victory-continue-button" class="secondary-button" type="button">以当前组合再守一次</button>
+        </div>
+      </section>
+
+      <section id="result-overlay" class="overlay" hidden aria-labelledby="result-title">
+        <div class="overlay-card result-sheet">
+          <p id="result-kicker" class="overlay-kicker">本轮薪火已经熄灭</p>
+          <h2 id="result-title">本轮止步</h2>
+          <p id="result-record-status" class="result-record-status">正在核对最佳尝试</p>
+          <div class="result-grid">
+            <div><span>抵达波次</span><strong id="result-wave">1</strong></div>
+            <div><span>完成波次</span><strong id="result-kills">0</strong></div>
+            <div><span>本轮得分</span><strong id="result-embers">0</strong></div>
+          </div>
+          <section id="result-score-card" class="score-card compact" hidden>
+            <div class="grade-seal"><span>本轮评定</span><strong id="result-grade">未通关</strong></div>
+            <div class="score-copy"><h3><span id="result-score">0</span> 分</h3><p id="result-score-note">击杀数不计分，继续推进与战术表现才计分。</p></div>
+          </section>
+          <div id="result-unlocks" class="result-unlocks" hidden aria-live="polite"></div>
+          <p id="result-note" class="result-note"></p>
+          <p id="result-target" class="result-target">下一局完成 W1</p>
+          <section id="result-relay" class="result-relay" hidden aria-labelledby="result-relay-title">
+            <p class="overlay-kicker">只留一枚 · 只到下一局</p>
+            <h3 id="result-relay-title">选择要接力的薪种</h3>
+            <div id="result-relay-list" class="relay-choice-list"></div>
+          </section>
+          <button id="retry-button" class="primary-button" type="button">再开一炉</button>
+          <button id="return-home-button" class="secondary-button" type="button">回到整备</button>
+        </div>
+      </section>
+
+      <section id="pause-overlay" class="overlay" hidden aria-labelledby="pause-title">
+        <div class="overlay-card pause-card">
+          <p class="overlay-kicker">薪火暂歇</p>
+          <h2 id="pause-title">游戏已暂停</h2>
+          <div class="run-stats" aria-label="当前战斗参数">
+            <span id="damage-stat">伤害 10</span>
+            <span id="speed-stat">移速 100%</span>
+            <span id="fire-rate-stat">射速 1.0/s</span>
+          </div>
+          <button id="resume-button" class="primary-button" type="button">继续</button>
+          <div class="pause-setting-grid" aria-label="战斗设置">
+            <button id="pause-auto-swap-toggle" class="secondary-button auto-swap-toggle" type="button" aria-pressed="true" aria-label="自动换火已开启，点击关闭">自动换火 · 开</button>
+            <button id="pause-music-toggle" class="secondary-button music-toggle" type="button" aria-pressed="true" aria-label="关闭背景音乐">音乐 · 开</button>
+            <button id="pause-mute-button" class="secondary-button" type="button" aria-pressed="false" aria-label="关闭声音">声音</button>
+          </div>
+          <div class="pause-footer-actions">
+            <button id="pause-help-button" class="secondary-button help-entry" type="button" aria-haspopup="dialog" aria-controls="help-overlay">玩法说明</button>
+            <button id="quit-run-button" class="secondary-button" type="button">放弃本局</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="tutorial-complete-overlay" class="overlay" hidden aria-labelledby="tutorial-complete-title">
+        <div class="overlay-card tutorial-complete-sheet">
+          <p class="overlay-kicker">试火完成 · 不计入正式纪录</p>
+          <h2 id="tutorial-complete-title">试火完成</h2>
+          <p class="tutorial-complete-copy">你已经会移动、换火、爆闪和选择成长。练习内容不会带入正式纪录。</p>
+          <div class="tutorial-checklist" aria-label="已掌握的新手操作">
+            <span>移动</span><span>换火</span><span>爆闪</span><span>成长</span><span>实战</span>
+          </div>
+          <button id="tutorial-enter-run-button" class="primary-button" type="button">进入正式局 · 直接 W1</button>
+          <button id="tutorial-home-button" class="secondary-button" type="button">回到整备</button>
+        </div>
+      </section>
+
+      <section id="help-overlay" class="help-overlay" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="help-title" aria-describedby="help-intro">
+        <div class="help-card">
+          <header class="help-heading">
+            <div><span>守火手册</span><h2 id="help-title">武器与玩法</h2></div>
+            <button id="help-close-button" class="help-close" type="button" aria-label="关闭玩法说明">关闭 <span aria-hidden="true">×</span></button>
+          </header>
+          <div class="help-tabs" role="tablist" aria-label="说明分类">
+            <button id="help-tab-weapons" type="button" role="tab" aria-selected="true" aria-controls="help-panel-weapons" tabindex="0" data-help-tab="weapons">四种兵器</button>
+            <button id="help-tab-growth" type="button" role="tab" aria-selected="false" aria-controls="help-panel-growth" tabindex="-1" data-help-tab="growth">成长与解锁</button>
+            <button id="help-tab-controls" type="button" role="tab" aria-selected="false" aria-controls="help-panel-controls" tabindex="-1" data-help-tab="controls">操作与守火</button>
+          </div>
+          <div id="help-scroll-body" class="help-body">
+            <section id="help-panel-weapons" class="help-panel" role="tabpanel" aria-labelledby="help-tab-weapons" tabindex="0">
+              <p id="help-intro" class="help-lead">四把武器、四种组合，从一开始就能选。每局带两把，当前武器自动攻击，另一把蓄热待命。</p>
+              <p class="help-small-note">每局武器从 Lv.1 开始，最高 Lv.5。Lv.3 与 Lv.5 会改变攻击方式，已获得的效果逐级保留。</p>
+              <div id="help-weapon-list" class="help-weapon-list"></div>
+              <section class="help-section">
+                <div class="help-section-heading"><span>选一组就出发</span><h3>不用等解锁，换个兵式试试</h3></div>
+                <div id="help-pair-list" class="help-pair-list"></div>
+              </section>
+            </section>
+            <section id="help-panel-growth" class="help-panel" hidden role="tabpanel" aria-labelledby="help-tab-growth" tabindex="0">
+              <p class="help-lead">局内选成长，让两把武器各自成型；通关后再解锁新的承火者和难度。</p>
+              <section class="help-section">
+                <div class="help-section-heading"><span>这一局如何变强</span><h3>普通波养兵器，首领波取炉心</h3></div>
+                <ol class="help-step-list">
+                  <li><b>01</b><div><strong>普通波结束后，手选一项成长</strong><p>可以升级手上的武器、蓄热中的武器，或选择辅助强化。认准卡上的武器名和下一等级，不必平均升级。</p></div></li>
+                  <li><b>02</b><div><strong>先奔 Lv.3，再看 Lv.5</strong><p>Lv.3 是第一次明显变化，Lv.5 是这把武器的完整形态；升到上限后，成长页会用辅助选项补位。</p></div></li>
+                  <li><b>03</b><div><strong>W5 选 Lv.1 炉心，W10 再锻到 Lv.2</strong><p id="help-core-availability">第5波首领后手选Lv.1炉心，第10波首领后再次选择并升到Lv.2，可以换炉心类型。炉心只在本局生效，三种炉心没有永久解锁门槛。</p></div></li>
+                </ol>
+                <p class="help-small-note">武器等级和炉心属于当前这一局，重开会重新成长；已解锁的角色、难度和纪录会保留。</p>
+              </section>
+              <section class="help-section">
+                <div class="help-section-heading"><span>承火者</span><h3>三种守火方式</h3></div>
+                <div id="help-bearer-list" class="help-unlock-list"></div>
+              </section>
+              <section class="help-section">
+                <div class="help-section-heading"><span>难度</span><h3>一步一步，把火守得更稳</h3></div>
+                <div id="help-difficulty-list" class="help-difficulty-route"></div>
+                <p id="help-record-note" class="help-small-note">薪种接火后的通关也能解锁角色、难度和火印；正式守火纪录只收录未接火的第15波胜利。新手试火不会写入正式通关解锁。</p>
+              </section>
+              <section class="help-section">
+                <div class="help-section-heading"><span>想再进一步</span><h3>炉心与成招，逐步读懂</h3></div>
+                <details class="help-minor-levels help-guide-details">
+                  <summary>三种炉心如何改变节奏</summary>
+                  <div id="help-core-list" class="help-definition-list"></div>
+                </details>
+                <details class="help-minor-levels help-guide-details">
+                  <summary>怎样锻出、连接四种成招</summary>
+                  <p id="help-technique-intro"></p>
+                  <p id="help-technique-families" class="help-small-note"></p>
+                  <div id="help-technique-list" class="help-definition-list"></div>
+                </details>
+                <details class="help-minor-levels help-guide-details">
+                  <summary>火印成就的条件与奖励</summary>
+                  <p id="help-achievement-intro"></p>
+                  <div id="help-achievement-list" class="help-definition-list"></div>
+                </details>
+              </section>
+              <section class="help-section">
+                <div class="help-section-heading"><span>失败后</span><h3>这一轮熄灭，下一轮再接火</h3></div>
+                <p>失败页会给出下一局目标；有薪种可选时，可以把一项强化带进下一局。薪种在下一局消耗，跨过它标注的目标后才获得第二层，不是无限叠加的永久等级。</p>
+                <p class="help-small-note">换手机或安装版前，可在首页「传承」导出存档，再在新入口导入。安装版和原 HTML 不会自动同步进度。</p>
+              </section>
+            </section>
+            <section id="help-panel-controls" class="help-panel" hidden role="tabpanel" aria-labelledby="help-tab-controls" tabindex="0">
+              <p class="help-lead">先保持移动。瞄准与攻击交给武器，看到危险预警就找空隙。</p>
+              <div class="help-control-grid">
+                <article><span class="help-control-glyph" aria-hidden="true">↗</span><h3>移动</h3><p>手机：按住战场并拖动。电脑：WASD / 方向键，或用鼠标在战场拖动。</p></article>
+                <article><span class="help-control-glyph" aria-hidden="true">换</span><h3>换火</h3><p>手机点右下换火按钮（显示副手兵器图标与炉热），电脑按 Q。换到另一把兵器；它满热时，还会释放自己的拔火技。</p></article>
+                <article><span class="help-control-glyph" aria-hidden="true">闪</span><h3>薪火爆闪</h3><p>手机点「闪」，电脑按空格。沿移动方向快速位移，带 0.16 秒无敌，并清除路径上的敌弹；基础冷却 4.8 秒。</p></article>
+                <article><span class="help-control-glyph" aria-hidden="true">Ⅱ</span><h3>暂停与选择</h3><p>点右上暂停；成长页可直接点卡片，电脑也可按 1 / 2 / 3。读说明不会替你按「继续」。</p></article>
+              </div>
+              <section class="help-section">
+                <div class="help-section-heading"><span>换火的节奏</span><h3>两把兵器轮流上场</h3></div>
+                <p>通常由当前武器进行普通攻击；并蒂炉心可让双器短暂协射。收起的兵器持续蓄热，基础约 4 秒蓄满；满热切入时先放拔火技，再继续普通攻击。</p>
+                <p>自动换火默认开启，W3 起会在副手满热后切换；也可以在首页或暂停页关闭，自己决定何时换。开启自动换火时，仍能手动点换火按钮。</p>
+              </section>
+              <section class="help-section">
+                <div class="help-section-heading"><span>十五波守火</span><h3>看到预警，先躲再打</h3></div>
+                <p>W5、W10、W15 是首领节点，第 15 波结束就是本局终点。普通波也会有喘息与压力变化，别因为刚清掉一群怪就站着不动。</p>
+                <p>预警线亮起时，先走出它指向的路径；爆闪是救命机会，不必冷却一好就立刻使用。所有承火者的爆闪都能清除路径上的敌弹，并在条件满足时返弹；岚额外留下火线，澜额外释放护火潮。</p>
+                <details class="help-minor-levels help-guide-details">
+                  <summary>爆闪什么时候能借回敌弹</summary>
+                  <p>穿过的敌弹会被清除；只有发射者仍存活、返弹容量还有空位时，才能借回敌弹，每次最多三枚。并非每次穿弹都能返弹。返弹命中后，及时换火可以追击合焰。</p>
+                </details>
+              </section>
+              <section class="help-section">
+                <div class="help-section-heading"><span>随身守火</span><h3>安装与离线</h3></div>
+                <p>手机用浏览器打开试玩网址。安卓在菜单选择「安装应用」或「添加到主屏幕」；iPhone 用 Safari 的分享菜单选择「添加到主屏幕」。首次联网打开并完成缓存后，可从桌面图标断网开局。推荐横屏游玩。</p>
+                <p id="help-offline-status" class="help-small-note" role="status">单文件版可以直接离线游玩；手机安装版首次打开时需联网完成缓存。</p>
+                <p class="help-small-note">换设备前，在原入口的「传承」导出存档，把 JSON 文件带到新手机，再从新入口的「传承」导入。浏览器清理网站数据可能移除本地进度，重要存档请保留导出文件。</p>
+              </section>
+              <section class="help-section help-audio-note">
+                <div class="help-section-heading"><span>声音</span><h3>按自己的耳朵调整</h3></div>
+                <p>首页和暂停页都能开关音乐。关闭「声音」会把音乐与音效一起静音；手机音量、静音模式与第一次触摸也可能影响是否听得到。</p>
+              </section>
+            </section>
+          </div>
+          <p class="help-bottom-note">战斗中查看后仍保持暂停；点「继续」才回到战斗。</p>
+        </div>
+      </section>
+
+      <div id="toast" class="toast" hidden aria-live="polite"></div>
+    </div>
+
+    <script src="./probe-bootstrap.js"></script>
+    <script src="./logic.js"></script>
+    <script src="./app.js" data-build-channel="production" data-bundled-sha256="aa9bcb3fdc683627e50913747d14cb1e63e9f919be39b70784c20ad92ca8b0cc"></script>
+  </body>
+</html>

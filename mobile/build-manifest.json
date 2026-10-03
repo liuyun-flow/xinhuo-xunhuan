@@ -1,0 +1,153 @@
+{
+  "schema": 3,
+  "id": "EMBER-MOBILE-01",
+  "candidateId": "EMBER-MOBILE-01",
+  "version": "EMBER-MOBILE-01",
+  "deliveryClass": "pwa-candidate",
+  "candidate": true,
+  "channel": "production",
+  "sourceCommit": "27ee268a966440e1f5bcb5417af5ffffdd2cb583",
+  "productionSha256": "afa997cdce15166431bec0f3f7263e9a32b70ab1a4fc5b0c06ff527664b0d582",
+  "transformChain": [
+    {
+      "id": "ember-test-bridge-v1",
+      "channel": "production"
+    },
+    {
+      "id": "ember-pwa-storage-namespace-v1",
+      "storagePrefix": "ember-loop-ember-mobile-01-"
+    },
+    {
+      "id": "ember-g7-candidate-shell-v1",
+      "defaultLayout": "b",
+      "diagnosticsQuery": "diagnostics=1"
+    }
+  ],
+  "comparisonClass": "post-g4-fixed-world-platform-projection",
+  "defaultLayout": "b",
+  "diagnosticsQuery": "diagnostics=1",
+  "platformContract": {
+    "logicalArena": {
+      "width": 750,
+      "height": 332
+    },
+    "areaMetric": "arena-intersection-over-visual-viewport-safe-area",
+    "minimumArenaAreaRatio": 0.85,
+    "layoutA": {
+      "shellWidthCap": 760,
+      "projection": "contain"
+    },
+    "layoutB": {
+      "shellWidthCap": null,
+      "projection": "contain-safe-viewport"
+    },
+    "lifecycleLogCapacity": 48,
+    "gameEvents": {
+      "audioResume": "ember:platform-audio-resume",
+      "audioState": "ember:platform-audio-state",
+      "hapticsPreference": "ember:platform-haptics-preference",
+      "snapshotRequest": "ember:platform-snapshot-request",
+      "snapshot": "ember:platform-snapshot"
+    }
+  },
+  "storageNamespace": "ember-loop-ember-mobile-01-",
+  "serviceWorkerScope": "./",
+  "cacheName": "ember-ember-mobile-01-27ee268a966440e1",
+  "buildId": "989672b7a04c294a",
+  "runtimeIdentityAlgorithm": "sha256(sorted(relativePath\\0bytes\\0sha256\\n)); excludes build-manifest.json",
+  "runtimeContentSha256": "989672b7a04c294ae2a0028300ad048503f9d2cb5ea2e033824d91e80abafa7e",
+  "c11": {
+    "path": "发行版/薪火循环-EXP-C11-001.html",
+    "sha256": "7b1a4fbead36858ea8711332a196996942057cde2fd2bf1923f3f87aa2921cd9"
+  },
+  "sourceHashes": {
+    "薪火循环-EXP-C04-005.html": "d897a315c110b40e04b6923846797ce2355434b41a33ac89fdb7b1780022f961",
+    "styles.css": "bd46fc162c79ce22106ad2e0e436592e99ad5bfadc4b3d91e30fddd219830209",
+    "logic.js": "f86d58cfff2061e20dbc8044615173a6f81248d440617602479dc6c090a035d0",
+    "app.js": "9d4cc8bfed3bc10730f0ac74d24d49e23bc93f8fd92a73fe1eabc1fdf95968da",
+    "pwa-probe/manifest.webmanifest": "5d5bcf71cfda308525fbe6d3430413a17198df58fdcf9d9a6a679d5fcbc19d96",
+    "pwa-probe/probe-bootstrap.js": "cea86921362e2e8d36d1635545c12994f7e1c48366e0e3441fe24d33e2a0b89c",
+    "pwa-probe/probe-shell.css": "213358ed103d1ea5c7fd14d5142986931d5234af02cd029bfb8a3eb5e19a8f5d",
+    "pwa-probe/sw.template.js": "c7ebd8079688c7e13d43d85301e151926ee1622ad6f12e7fb964b217f3b927d0",
+    "pwa-probe/icons/icon-180.png": "c9335eb8457e5a6dc750ff9a2f0a769e318c166a66edb076575854b7fea29867",
+    "pwa-probe/icons/icon-192.png": "21959f0a02b97ed6e1b4eba53b276fda061b1a3fd022baed777a58b995bd8c0f",
+    "pwa-probe/icons/icon-512.png": "e51f53d54db7c4da3199dc7af92a1ae8bb9b91e8be2bda407f0c8fd337cab0ca",
+    "pwa-probe/icons/icon-maskable-512.png": "a8f1246a3613d21e0b3aca43e7c67d554302da3d061482b026cc0bd4d4b900b8"
+  },
+  "rawAppSha256": "9d4cc8bfed3bc10730f0ac74d24d49e23bc93f8fd92a73fe1eabc1fdf95968da",
+  "bundledAppSha256": "aa9bcb3fdc683627e50913747d14cb1e63e9f919be39b70784c20ad92ca8b0cc",
+  "bundledSourceHashes": {
+    "index.html": "82cb8e29231af85737fd2e2a39d551f634832dc317031011267e54434806fb50",
+    "styles.css": "bd46fc162c79ce22106ad2e0e436592e99ad5bfadc4b3d91e30fddd219830209",
+    "logic.js": "f86d58cfff2061e20dbc8044615173a6f81248d440617602479dc6c090a035d0",
+    "app.js": "aa9bcb3fdc683627e50913747d14cb1e63e9f919be39b70784c20ad92ca8b0cc",
+    "probe-bootstrap.js": "bc84d0587e956b38c019b0e47b5fb0f9fed0bd4dcbd243879da7c1fc85ead438",
+    "probe-shell.css": "e062e6b0c48b81400a1b2cd5d5e2f87b8fb0a8d87b9ca54baefca853650eaec0",
+    "manifest.webmanifest": "67300c4b6b110bf565358681e584cb44ed1f066a9c3843c9c58c30e99f076df6",
+    "sw.js": "d5f1cde04c71baab11ea86d8df50fb7bcd3d0a9dbfbd453c45974203682791a3"
+  },
+  "precacheUrls": [
+    "./app.js",
+    "./build-manifest.json",
+    "./icons/icon-180.png",
+    "./icons/icon-192.png",
+    "./icons/icon-512.png",
+    "./icons/icon-maskable-512.png",
+    "./index.html",
+    "./logic.js",
+    "./manifest.webmanifest",
+    "./probe-bootstrap.js",
+    "./probe-shell.css",
+    "./styles.css"
+  ],
+  "files": {
+    "app.js": {
+      "bytes": 448284,
+      "sha256": "aa9bcb3fdc683627e50913747d14cb1e63e9f919be39b70784c20ad92ca8b0cc"
+    },
+    "icons/icon-180.png": {
+      "bytes": 10800,
+      "sha256": "c9335eb8457e5a6dc750ff9a2f0a769e318c166a66edb076575854b7fea29867"
+    },
+    "icons/icon-192.png": {
+      "bytes": 11440,
+      "sha256": "21959f0a02b97ed6e1b4eba53b276fda061b1a3fd022baed777a58b995bd8c0f"
+    },
+    "icons/icon-512.png": {
+      "bytes": 33055,
+      "sha256": "e51f53d54db7c4da3199dc7af92a1ae8bb9b91e8be2bda407f0c8fd337cab0ca"
+    },
+    "icons/icon-maskable-512.png": {
+      "bytes": 26332,
+      "sha256": "a8f1246a3613d21e0b3aca43e7c67d554302da3d061482b026cc0bd4d4b900b8"
+    },
+    "index.html": {
+      "bytes": 40543,
+      "sha256": "82cb8e29231af85737fd2e2a39d551f634832dc317031011267e54434806fb50"
+    },
+    "logic.js": {
+      "bytes": 147295,
+      "sha256": "f86d58cfff2061e20dbc8044615173a6f81248d440617602479dc6c090a035d0"
+    },
+    "manifest.webmanifest": {
+      "bytes": 894,
+      "sha256": "67300c4b6b110bf565358681e584cb44ed1f066a9c3843c9c58c30e99f076df6"
+    },
+    "probe-bootstrap.js": {
+      "bytes": 22950,
+      "sha256": "bc84d0587e956b38c019b0e47b5fb0f9fed0bd4dcbd243879da7c1fc85ead438"
+    },
+    "probe-shell.css": {
+      "bytes": 3468,
+      "sha256": "e062e6b0c48b81400a1b2cd5d5e2f87b8fb0a8d87b9ca54baefca853650eaec0"
+    },
+    "styles.css": {
+      "bytes": 140212,
+      "sha256": "bd46fc162c79ce22106ad2e0e436592e99ad5bfadc4b3d91e30fddd219830209"
+    },
+    "sw.js": {
+      "bytes": 2203,
+      "sha256": "d5f1cde04c71baab11ea86d8df50fb7bcd3d0a9dbfbd453c45974203682791a3"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "name": "薪火循环·余烬重铸",
+  "short_name": "薪火循环",
+  "description": "《薪火循环》EMBER-MOBILE-01 私有真机与真人验收候选；未进入发行版。",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "display": "fullscreen",
+  "display_override": [
+    "fullscreen",
+    "standalone"
+  ],
+  "orientation": "landscape",
+  "background_color": "#0c1510",
+  "theme_color": "#0c1510",
+  "categories": [
+    "games"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
