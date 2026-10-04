@@ -344,7 +344,7 @@
       const response = await window.fetch("./build-manifest.json", { cache: "no-store", credentials: "same-origin" });
       if (!response.ok) throw new Error(`Candidate identity HTTP ${response.status}`);
       const identity = await response.json();
-      if (identity.candidateId !== "EMBER-MOBILE-02" || identity.sourceCommit !== "3f494672bf4c4cbb63a5895697462e419a87f016" || identity.productionSha256 !== "c65656acbf6917c13bdd3da463a872fef5a0a120a0287b930b7217fdad5774b7") {
+      if (identity.candidateId !== "EMBER-MOBILE-01" || identity.sourceCommit !== "27ee268a966440e1f5bcb5417af5ffffdd2cb583" || identity.productionSha256 !== "afa997cdce15166431bec0f3f7263e9a32b70ab1a4fc5b0c06ff527664b0d582") {
         throw new Error("Candidate identity manifest binding mismatch");
       }
       if (!/^[a-f0-9]{16}$/.test(String(identity.buildId || "")) || !/^[a-f0-9]{64}$/.test(String(identity.runtimeContentSha256 || ""))) {
@@ -378,7 +378,7 @@
     return {
       schema: 2,
       candidate: true,
-      candidateId: "EMBER-MOBILE-02",
+      candidateId: "EMBER-MOBILE-01",
       deliveryClass: "pwa-candidate",
       sourceCommit: document.querySelector('meta[name="ember-source-commit"]')?.content || null,
       productionSha256: document.querySelector('meta[name="ember-production-sha256"]')?.content || null,

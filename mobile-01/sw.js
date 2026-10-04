@@ -1,7 +1,7 @@
 "use strict";
 
-const CACHE_PREFIX = "ember-ember-mobile-02-";
-const CACHE_NAME = "ember-ember-mobile-02-3f494672bf4c4cbb";
+const CACHE_PREFIX = "ember-ember-mobile-01-";
+const CACHE_NAME = "ember-ember-mobile-01-27ee268a966440e1";
 const PRECACHE_URLS = Object.freeze([
   "./app.js",
   "./build-manifest.json",

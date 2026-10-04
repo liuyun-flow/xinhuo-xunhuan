@@ -393,7 +393,7 @@ button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 .relay-burst strong { color: #ffd89b; font-size: 10px; }
 .joystick-zone { position: absolute; z-index: 5; bottom: var(--safe-bottom); left: 0; display: block; width: min(52%, calc(100% - 160px)); height: clamp(112px, 48%, 230px); pointer-events: none; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
 .joystick-zone::before { position: absolute; bottom: 18px; left: 18px; width: 72px; height: 72px; border: 1px dashed rgba(183, 235, 242, .22); border-radius: 50%; content: ""; opacity: 0; transition: opacity 100ms linear; }
-.joystick-base { position: absolute; top: auto; bottom: 16px; left: max(14px, var(--safe-left)); width: 96px; height: 96px; border: 1px solid rgba(183, 235, 242, .30); border-radius: 50%; background: radial-gradient(circle, rgba(111,214,231,.08) 0 43%, rgba(11,25,32,.44) 45% 100%); color: rgba(205, 247, 252, .54); box-shadow: inset 0 0 24px rgba(111,214,231,.08); opacity: 0; pointer-events: none; transition: opacity 100ms linear; }
+.joystick-base { position: absolute; top: calc(100% - 112px); left: 14px; width: 96px; height: 96px; border: 1px solid rgba(183, 235, 242, .30); border-radius: 50%; background: radial-gradient(circle, rgba(111,214,231,.08) 0 43%, rgba(11,25,32,.44) 45% 100%); color: rgba(205, 247, 252, .54); box-shadow: inset 0 0 24px rgba(111,214,231,.08); opacity: 0; pointer-events: none; transition: opacity 100ms linear; }
 .joystick-base::before, .joystick-base::after { position: absolute; top: 50%; left: 50%; background: rgba(183,235,242,.12); content: ""; transform: translate(-50%, -50%); }
 .joystick-base::before { width: 70%; height: 1px; }
 .joystick-base::after { width: 1px; height: 70%; }
@@ -609,8 +609,8 @@ button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
 @media (hover: none), (pointer: coarse), (any-pointer: coarse) {
   #game-canvas { cursor: default; }
-  .joystick-base { opacity: .5; }
-  .joystick-zone::before { display: none; }
+  .joystick-zone::before { opacity: .28; }
+  .joystick-zone.is-active::before { opacity: 0; }
   .joystick-zone.is-active .joystick-base { opacity: .9; }
   .weapon-rack { top: 88px; bottom: auto; width: 106px; }
   .drag-hint { bottom: 82px; max-width: 190px; }

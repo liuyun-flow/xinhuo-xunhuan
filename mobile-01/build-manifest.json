@@ -1,13 +1,13 @@
 {
   "schema": 3,
-  "id": "EMBER-MOBILE-02",
-  "candidateId": "EMBER-MOBILE-02",
-  "version": "EMBER-MOBILE-02",
+  "id": "EMBER-MOBILE-01",
+  "candidateId": "EMBER-MOBILE-01",
+  "version": "EMBER-MOBILE-01",
   "deliveryClass": "pwa-candidate",
   "candidate": true,
   "channel": "production",
-  "sourceCommit": "3f494672bf4c4cbb63a5895697462e419a87f016",
-  "productionSha256": "c65656acbf6917c13bdd3da463a872fef5a0a120a0287b930b7217fdad5774b7",
+  "sourceCommit": "27ee268a966440e1f5bcb5417af5ffffdd2cb583",
+  "productionSha256": "afa997cdce15166431bec0f3f7263e9a32b70ab1a4fc5b0c06ff527664b0d582",
   "transformChain": [
     {
       "id": "ember-test-bridge-v1",
@@ -52,19 +52,19 @@
   },
   "storageNamespace": "ember-loop-ember-mobile-01-",
   "serviceWorkerScope": "./",
-  "cacheName": "ember-ember-mobile-02-3f494672bf4c4cbb",
-  "buildId": "cb3da6df3b2d7c7b",
+  "cacheName": "ember-ember-mobile-01-27ee268a966440e1",
+  "buildId": "989672b7a04c294a",
   "runtimeIdentityAlgorithm": "sha256(sorted(relativePath\\0bytes\\0sha256\\n)); excludes build-manifest.json",
-  "runtimeContentSha256": "cb3da6df3b2d7c7b05526d076ecd2d500ac1a852c5236de67bbc0d0ec5b8b90c",
+  "runtimeContentSha256": "989672b7a04c294ae2a0028300ad048503f9d2cb5ea2e033824d91e80abafa7e",
   "c11": {
     "path": "发行版/薪火循环-EXP-C11-001.html",
     "sha256": "7b1a4fbead36858ea8711332a196996942057cde2fd2bf1923f3f87aa2921cd9"
   },
   "sourceHashes": {
-    "薪火循环-EXP-C04-005.html": "eaa73c8bfe04896383918fa2c9249329b1de0292582a47bc78980f32959f714c",
-    "styles.css": "f999fce026eafcd455c5d1b838f87a0032fa6731e03ba4372a48c2ec04e2f1e9",
+    "薪火循环-EXP-C04-005.html": "d897a315c110b40e04b6923846797ce2355434b41a33ac89fdb7b1780022f961",
+    "styles.css": "bd46fc162c79ce22106ad2e0e436592e99ad5bfadc4b3d91e30fddd219830209",
     "logic.js": "f86d58cfff2061e20dbc8044615173a6f81248d440617602479dc6c090a035d0",
-    "app.js": "e61a5680b098bc45b2e4c073445c78b1e60b1a47984fa2f273ef6e13e5934b4c",
+    "app.js": "9d4cc8bfed3bc10730f0ac74d24d49e23bc93f8fd92a73fe1eabc1fdf95968da",
     "pwa-probe/manifest.webmanifest": "5d5bcf71cfda308525fbe6d3430413a17198df58fdcf9d9a6a679d5fcbc19d96",
     "pwa-probe/probe-bootstrap.js": "cea86921362e2e8d36d1635545c12994f7e1c48366e0e3441fe24d33e2a0b89c",
     "pwa-probe/probe-shell.css": "213358ed103d1ea5c7fd14d5142986931d5234af02cd029bfb8a3eb5e19a8f5d",
@@ -74,17 +74,17 @@
     "pwa-probe/icons/icon-512.png": "e51f53d54db7c4da3199dc7af92a1ae8bb9b91e8be2bda407f0c8fd337cab0ca",
     "pwa-probe/icons/icon-maskable-512.png": "a8f1246a3613d21e0b3aca43e7c67d554302da3d061482b026cc0bd4d4b900b8"
   },
-  "rawAppSha256": "e61a5680b098bc45b2e4c073445c78b1e60b1a47984fa2f273ef6e13e5934b4c",
-  "bundledAppSha256": "114aaa2cd3151adb2988e9f7b3d5447e2a9fa7a031445aed5d264fc5f80b2bc5",
+  "rawAppSha256": "9d4cc8bfed3bc10730f0ac74d24d49e23bc93f8fd92a73fe1eabc1fdf95968da",
+  "bundledAppSha256": "aa9bcb3fdc683627e50913747d14cb1e63e9f919be39b70784c20ad92ca8b0cc",
   "bundledSourceHashes": {
-    "index.html": "725e8f477dc3420dc84fc9ab8b18ca80394f6980859edd78f73554283afb0d54",
-    "styles.css": "f999fce026eafcd455c5d1b838f87a0032fa6731e03ba4372a48c2ec04e2f1e9",
+    "index.html": "82cb8e29231af85737fd2e2a39d551f634832dc317031011267e54434806fb50",
+    "styles.css": "bd46fc162c79ce22106ad2e0e436592e99ad5bfadc4b3d91e30fddd219830209",
     "logic.js": "f86d58cfff2061e20dbc8044615173a6f81248d440617602479dc6c090a035d0",
-    "app.js": "114aaa2cd3151adb2988e9f7b3d5447e2a9fa7a031445aed5d264fc5f80b2bc5",
-    "probe-bootstrap.js": "6502b4eb3908b54b98faf72cf197b8760870191e00c0d013d3a3768cb518a6f6",
+    "app.js": "aa9bcb3fdc683627e50913747d14cb1e63e9f919be39b70784c20ad92ca8b0cc",
+    "probe-bootstrap.js": "bc84d0587e956b38c019b0e47b5fb0f9fed0bd4dcbd243879da7c1fc85ead438",
     "probe-shell.css": "e062e6b0c48b81400a1b2cd5d5e2f87b8fb0a8d87b9ca54baefca853650eaec0",
-    "manifest.webmanifest": "ea7fca4372fc99c2bcbe73705db57b65a93c56d18554b7ea77fc2c45cf4073d2",
-    "sw.js": "63a6a0c48e76a56f86ac1690e737677c44877f8b61065fbc686b50c109f3ebf6"
+    "manifest.webmanifest": "67300c4b6b110bf565358681e584cb44ed1f066a9c3843c9c58c30e99f076df6",
+    "sw.js": "d5f1cde04c71baab11ea86d8df50fb7bcd3d0a9dbfbd453c45974203682791a3"
   },
   "precacheUrls": [
     "./app.js",
@@ -102,8 +102,8 @@
   ],
   "files": {
     "app.js": {
-      "bytes": 446557,
-      "sha256": "114aaa2cd3151adb2988e9f7b3d5447e2a9fa7a031445aed5d264fc5f80b2bc5"
+      "bytes": 448284,
+      "sha256": "aa9bcb3fdc683627e50913747d14cb1e63e9f919be39b70784c20ad92ca8b0cc"
     },
     "icons/icon-180.png": {
       "bytes": 10800,
@@ -122,8 +122,8 @@
       "sha256": "a8f1246a3613d21e0b3aca43e7c67d554302da3d061482b026cc0bd4d4b900b8"
     },
     "index.html": {
-      "bytes": 40555,
-      "sha256": "725e8f477dc3420dc84fc9ab8b18ca80394f6980859edd78f73554283afb0d54"
+      "bytes": 40543,
+      "sha256": "82cb8e29231af85737fd2e2a39d551f634832dc317031011267e54434806fb50"
     },
     "logic.js": {
       "bytes": 147295,
@@ -131,23 +131,23 @@
     },
     "manifest.webmanifest": {
       "bytes": 894,
-      "sha256": "ea7fca4372fc99c2bcbe73705db57b65a93c56d18554b7ea77fc2c45cf4073d2"
+      "sha256": "67300c4b6b110bf565358681e584cb44ed1f066a9c3843c9c58c30e99f076df6"
     },
     "probe-bootstrap.js": {
       "bytes": 22950,
-      "sha256": "6502b4eb3908b54b98faf72cf197b8760870191e00c0d013d3a3768cb518a6f6"
+      "sha256": "bc84d0587e956b38c019b0e47b5fb0f9fed0bd4dcbd243879da7c1fc85ead438"
     },
     "probe-shell.css": {
       "bytes": 3468,
       "sha256": "e062e6b0c48b81400a1b2cd5d5e2f87b8fb0a8d87b9ca54baefca853650eaec0"
     },
     "styles.css": {
-      "bytes": 140219,
-      "sha256": "f999fce026eafcd455c5d1b838f87a0032fa6731e03ba4372a48c2ec04e2f1e9"
+      "bytes": 140212,
+      "sha256": "bd46fc162c79ce22106ad2e0e436592e99ad5bfadc4b3d91e30fddd219830209"
     },
     "sw.js": {
       "bytes": 2203,
-      "sha256": "63a6a0c48e76a56f86ac1690e737677c44877f8b61065fbc686b50c109f3ebf6"
+      "sha256": "d5f1cde04c71baab11ea86d8df50fb7bcd3d0a9dbfbd453c45974203682791a3"
     }
   }
 }

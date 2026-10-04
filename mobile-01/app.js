@@ -2221,7 +2221,7 @@
     if (step === "move") return {
       title: "先活着移动",
       copy: touch
-        ? "拖动左下固定轮盘的摇杆，移动一小段。"
+        ? "在战场左下拖动浮动轮盘，移动一小段。"
         : "按 WASD／方向键，或点击地面移动一小段。"
     };
     if (step === "switch") return {
@@ -8588,16 +8588,48 @@
     return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
   }
 
+  function clampJoystickCenter(clientX, clientY) {
+    const zoneRect = dom.joystickZone.getBoundingClientRect();
+    const arenaRect = dom.arena.getBoundingClientRect();
+    const visualRadius = JOYSTICK_FULL_RADIUS;
+    const minimumX = Math.max(zoneRect.left + visualRadius, arenaRect.left + visualRadius);
+    const maximumX = Math.min(zoneRect.right - visualRadius, arenaRect.right - visualRadius);
+    const minimumY = Math.max(zoneRect.top + visualRadius, arenaRect.top + visualRadius);
+    const maximumY = Math.min(zoneRect.bottom - visualRadius, arenaRect.bottom - visualRadius);
+    return {
+      x: minimumX <= maximumX ? clamp(clientX, minimumX, maximumX) : (zoneRect.left + zoneRect.right) / 2,
+      y: minimumY <= maximumY ? clamp(clientY, minimumY, maximumY) : (zoneRect.top + zoneRect.bottom) / 2
+    };
+  }
+
   function renderJoystick() {
+    const zoneRect = dom.joystickZone.getBoundingClientRect();
+    dom.joystickBase.style.left = Math.round(input.joystickCenterX - zoneRect.left - JOYSTICK_FULL_RADIUS) + "px";
+    dom.joystickBase.style.top = Math.round(input.joystickCenterY - zoneRect.top - JOYSTICK_FULL_RADIUS) + "px";
     dom.joystickKnob.style.transform = "translate(-50%, -50%) translate(" +
       (input.joystickVectorX * JOYSTICK_KNOB_TRAVEL).toFixed(2) + "px, " +
       (input.joystickVectorY * JOYSTICK_KNOB_TRAVEL).toFixed(2) + "px)";
   }
 
   function updateJoystick(clientX, clientY) {
-    const dx = clientX - input.joystickCenterX;
-    const dy = clientY - input.joystickCenterY;
-    const distance = Math.hypot(dx, dy);
+    let dx = clientX - input.joystickCenterX;
+    let dy = clientY - input.joystickCenterY;
+    let distance = Math.hypot(dx, dy);
+    if (distance > JOYSTICK_FULL_RADIUS) {
+      const followDistance = distance - JOYSTICK_FULL_RADIUS;
+      const followedCenter = clampJoystickCenter(
+        input.joystickCenterX + dx / distance * followDistance,
+        input.joystickCenterY + dy / distance * followDistance
+      );
+      if (Math.hypot(followedCenter.x - input.joystickCenterX, followedCenter.y - input.joystickCenterY) > 0.01) {
+        inputDebug.joystickRecenteringCount += 1;
+      }
+      input.joystickCenterX = followedCenter.x;
+      input.joystickCenterY = followedCenter.y;
+      dx = clientX - input.joystickCenterX;
+      dy = clientY - input.joystickCenterY;
+      distance = Math.hypot(dx, dy);
+    }
     const strength = distance <= JOYSTICK_DEAD_ZONE
       ? 0
       : clamp((distance - JOYSTICK_DEAD_ZONE) / (JOYSTICK_FULL_RADIUS - JOYSTICK_DEAD_ZONE), 0, 1);
@@ -8640,15 +8672,15 @@
     input.movePointerType = pointerType;
     input.movePointerSource = isTouchMovement ? "joystick" : "canvas";
     if (isTouchMovement) {
-      const baseRect = dom.joystickBase.getBoundingClientRect();
-      input.joystickCenterX = (baseRect.left + baseRect.right) / 2;
-      input.joystickCenterY = (baseRect.top + baseRect.bottom) / 2;
+      const center = clampJoystickCenter(event.clientX, event.clientY);
+      input.joystickCenterX = center.x;
+      input.joystickCenterY = center.y;
       input.joystickVectorX = 0;
       input.joystickVectorY = 0;
       input.hasTarget = false;
       inputDebug.joystickPointerDowns += 1;
       dom.joystickZone.classList.add("is-active");
-      updateJoystick(event.clientX, event.clientY);
+      renderJoystick();
     } else {
       input.hasTarget = true;
       input.targetX = clamp(point.x, run.player.radius, ARENA_GEOMETRY.width - run.player.radius);
